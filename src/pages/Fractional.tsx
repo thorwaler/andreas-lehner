@@ -5,33 +5,25 @@ import Layout from "@/components/Layout";
 import SectionReveal from "@/components/SectionReveal";
 import profileProfessional from "@/assets/profile-professional.jpeg";
 import waveNavy from "@/assets/wave-navy.png";
-
-const milestones = [
-  {
-    company: "Own Venture",
-    achievement: "Built a startup to €100M in assets under management",
-    role: "Founder & CEO",
-  },
-  {
-    company: "AMMP Technologies",
-    achievement: "Doubled customer base and led commercial growth",
-    role: "CCO",
-  },
-  {
-    company: "Sanate",
-    achievement: "Established sales operations from scratch",
-    role: "Growth Lead",
-  },
-  {
-    company: "Trine",
-    achievement: "Drove investor acquisition and market expansion",
-    role: "Commercial Lead",
-  },
-];
-
+const milestones = [{
+  company: "Own Venture",
+  achievement: "Built a startup to €100M in assets under management",
+  role: "Founder & CEO"
+}, {
+  company: "AMMP Technologies",
+  achievement: "Doubled customer base and led commercial growth",
+  role: "CCO"
+}, {
+  company: "Sanate",
+  achievement: "Established sales operations from scratch",
+  role: "Growth Lead"
+}, {
+  company: "Trine",
+  achievement: "Drove investor acquisition and market expansion",
+  role: "Commercial Lead"
+}];
 const Fractional = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
@@ -77,11 +69,7 @@ const Fractional = () => {
               <SectionReveal delay={200}>
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-accent/10 rounded-2xl blur-xl" />
-                  <img
-                    src={profileProfessional}
-                    alt="Andreas Lehner"
-                    className="relative w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
-                  />
+                  <img alt="Andreas Lehner" className="relative w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl" src="/lovable-uploads/488f0e07-5dd0-4fbf-9393-6545f3b88b71.jpg" />
                 </div>
               </SectionReveal>
             </div>
@@ -157,20 +145,12 @@ const Fractional = () => {
             </SectionReveal>
 
             <div className="space-y-6">
-              {[
-                "You've validated your product but struggle to scale sales consistently",
-                "You need experienced commercial leadership but can't justify a full-time C-suite hire",
-                "Operations are becoming a bottleneck as you grow",
-                "You're preparing for a funding round and need to professionalize your go-to-market",
-                "Your founding team is stretched thin and needs hands-on support",
-              ].map((item, index) => (
-                <SectionReveal key={index} delay={index * 100}>
+              {["You've validated your product but struggle to scale sales consistently", "You need experienced commercial leadership but can't justify a full-time C-suite hire", "Operations are becoming a bottleneck as you grow", "You're preparing for a funding round and need to professionalize your go-to-market", "Your founding team is stretched thin and needs hands-on support"].map((item, index) => <SectionReveal key={index} delay={index * 100}>
                   <div className="flex items-start gap-4 p-4 rounded-lg bg-cream/50 border border-border">
                     <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
                     <p className="text-foreground leading-relaxed">{item}</p>
                   </div>
-                </SectionReveal>
-              ))}
+                </SectionReveal>)}
             </div>
           </div>
         </div>
@@ -184,15 +164,13 @@ const Fractional = () => {
           </SectionReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <SectionReveal key={index} delay={index * 100}>
+            {milestones.map((milestone, index) => <SectionReveal key={index} delay={index * 100}>
                 <div className="bg-background p-8 rounded-xl border border-border hover:shadow-lg transition-shadow duration-300">
                   <div className="text-sm text-secondary font-medium mb-2">{milestone.role}</div>
                   <h3 className="text-xl font-medium mb-3">{milestone.company}</h3>
                   <p className="text-muted-foreground leading-relaxed">{milestone.achievement}</p>
                 </div>
-              </SectionReveal>
-            ))}
+              </SectionReveal>)}
           </div>
         </div>
       </section>
@@ -207,11 +185,7 @@ const Fractional = () => {
                 Let's have a conversation about your challenges and explore how I might help. 
                 No pitch decks, no pressure—just a real discussion about what's possible.
               </p>
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-background text-foreground hover:bg-background/90"
-              >
+              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">
                 <Link to="/contact">
                   Schedule a call
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -221,8 +195,6 @@ const Fractional = () => {
           </SectionReveal>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Fractional;
