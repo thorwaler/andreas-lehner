@@ -21,8 +21,8 @@ const navLinks = [{
 const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 py-4 bg-[#fee1b9]">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-[#FEE1B8] border-b border-border">
+      <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
