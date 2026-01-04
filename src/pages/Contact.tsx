@@ -1,5 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Linkedin, Mail, BookOpen, FileText, Send } from "lucide-react";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidgets: () => void;
+    };
+  }
+}
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +19,30 @@ import waveSage from "@/assets/wave-sage.png";
 
 const Contact = () => {
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Initialize Calendly widget after component mounts
+    const initCalendly = () => {
+      if (window.Calendly) {
+        window.Calendly.initInlineWidgets();
+      }
+    };
+    
+    // Try immediately in case script is already loaded
+    initCalendly();
+    
+    // Also listen for script load
+    const script = document.querySelector('script[src*="calendly"]');
+    if (script) {
+      script.addEventListener('load', initCalendly);
+    }
+    
+    return () => {
+      if (script) {
+        script.removeEventListener('load', initCalendly);
+      }
+    };
+  }, []);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",

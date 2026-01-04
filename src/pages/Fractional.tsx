@@ -8,15 +8,15 @@ import waveNavy from "@/assets/wave-navy.png";
 const milestones = [{
   company: "Trine",
   achievement: "Built a startup to €100M in assets under management",
-  role: "Commercial Lead"
+  role: "Co-Founder and COO/Head of BD"
 }, {
-  company: "AMMP Technologies",
+  company: "AMMP",
   achievement: "Doubled customer base and led commercial growth",
-  role: "CCO"
+  role: "Fractional CCO"
 }, {
   company: "Sanate",
-  achievement: "Established sales operations from scratch",
-  role: "Growth Lead"
+  achievement: "Built operations and key tooling from scratch",
+  role: "Fractional COO"
 }, {
   company: "Other Ventures",
   achievement: "Built deal pipelines and market expansion",
