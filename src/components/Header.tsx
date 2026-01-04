@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import icon from "@/assets/icon.png";
 const navLinks = [{
   to: "/",
   label: "Home"
@@ -26,7 +26,8 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Andreas Lehner" className="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <img src={icon} alt="Andreas Lehner" className="h-8 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <span className="text-sm tracking-wide text-foreground">Andreas Lehner</span>
           </Link>
 
           {/* Desktop Navigation */}

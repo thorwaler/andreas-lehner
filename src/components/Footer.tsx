@@ -61,7 +61,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:hello@andreaslehner.com"
+                href="mailto:hi@andreas-lehner.com"
                 className="p-2 rounded-full bg-background border border-border hover:border-secondary hover:text-secondary transition-all duration-200"
                 aria-label="Email"
               >

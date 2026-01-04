@@ -165,7 +165,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="mailto:hello@andreaslehner.com"
+                    href="mailto:hi@andreas-lehner.com"
                     className="flex items-center gap-4 p-4 rounded-xl bg-cream/50 border border-border hover:border-secondary/50 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
@@ -173,7 +173,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-sm text-muted-foreground">hello@andreaslehner.com</div>
+                      <div className="text-sm text-muted-foreground">hi@andreas-lehner.com</div>
                     </div>
                   </a>
 
@@ -191,7 +191,8 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="/CV_Andreas_Lehner.pdf"
+                    download
                     className="flex items-center gap-4 p-4 rounded-xl bg-cream/50 border border-border hover:border-secondary/50 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
@@ -209,18 +210,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Calendly Placeholder */}
+      {/* Calendly Widget */}
       <section className="py-16 bg-cream/50">
         <div className="container mx-auto px-6">
           <SectionReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-2xl font-medium mb-4">Prefer to schedule directly?</h2>
-              <p className="text-muted-foreground mb-6">
-                If you'd like to book a call, a scheduling link can be added here.
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-medium mb-4 text-center">Prefer to schedule directly?</h2>
+              <p className="text-muted-foreground mb-8 text-center">
+                Book a 30-minute call to discuss how I can help.
               </p>
-              <Button variant="outline" size="lg" disabled>
-                Calendly coming soon
-              </Button>
+              <div 
+                className="calendly-inline-widget rounded-xl overflow-hidden" 
+                data-url="https://calendly.com/hi-andreas-lehner/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e3051" 
+                style={{ minWidth: '320px', height: '700px' }}
+              />
             </div>
           </SectionReveal>
         </div>
