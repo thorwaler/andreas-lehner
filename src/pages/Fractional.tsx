@@ -6,9 +6,9 @@ import SectionReveal from "@/components/SectionReveal";
 import profileProfessional from "@/assets/profile-professional.jpeg";
 import waveNavy from "@/assets/wave-navy.png";
 const milestones = [{
-  company: "Own Venture",
+  company: "Trine",
   achievement: "Built a startup to €100M in assets under management",
-  role: "Founder & CEO"
+  role: "Commercial Lead"
 }, {
   company: "AMMP Technologies",
   achievement: "Doubled customer base and led commercial growth",
@@ -18,9 +18,9 @@ const milestones = [{
   achievement: "Established sales operations from scratch",
   role: "Growth Lead"
 }, {
-  company: "Trine",
-  achievement: "Drove investor acquisition and market expansion",
-  role: "Commercial Lead"
+  company: "Other Ventures",
+  achievement: "Built deal pipelines and market expansion",
+  role: "Advisor & Consultant"
 }];
 const Fractional = () => {
   return <Layout>

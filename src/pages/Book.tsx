@@ -61,13 +61,13 @@ const Book = () => {
               <SectionReveal delay={500}>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://books2read.com/mindyourmoney" target="_blank" rel="noopener noreferrer">
                       Buy the book
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <a href="#" download>
+                    <a href="/Free_Chapter.pdf" download>
                       Download sample
                       <Download className="ml-2 h-4 w-4" />
                     </a>
@@ -165,7 +165,7 @@ const Book = () => {
                   size="lg" 
                   className="bg-background text-foreground hover:bg-background/90"
                 >
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://books2read.com/mindyourmoney" target="_blank" rel="noopener noreferrer">
                     Buy the book
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
@@ -174,7 +174,7 @@ const Book = () => {
                   asChild 
                   size="lg" 
                   variant="outline"
-                  className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10"
+                  className="border-background/30 bg-transparent text-background hover:bg-background/10"
                 >
                   <Link to="/contact">
                     Get in touch
