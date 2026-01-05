@@ -12,7 +12,7 @@ import waveSage from "@/assets/wave-sage.png";
 declare global {
   interface Window {
     Calendly?: {
-      initInlineWidgets: () => void;
+      initInlineWidget?: (options: { url: string; parentElement: Element }) => void;
     };
   }
 }
@@ -28,14 +28,19 @@ const Contact = () => {
   // Initialize Calendly widget after component mounts (for client-side navigation)
   useEffect(() => {
     const initCalendly = () => {
-      if (window.Calendly) {
-        window.Calendly.initInlineWidgets();
+      if (window.Calendly && typeof window.Calendly.initInlineWidget === 'function') {
+        const widgetElement = document.querySelector('.calendly-inline-widget');
+        const dataUrl = widgetElement?.getAttribute('data-url');
+        if (widgetElement && dataUrl) {
+          window.Calendly.initInlineWidget({
+            url: dataUrl,
+            parentElement: widgetElement,
+          });
+        }
       }
     };
 
-    initCalendly();
-    const timeout = setTimeout(initCalendly, 500);
-
+    const timeout = setTimeout(initCalendly, 100);
     return () => clearTimeout(timeout);
   }, []);
 
