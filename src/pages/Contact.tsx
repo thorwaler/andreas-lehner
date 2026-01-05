@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Linkedin, Mail, BookOpen, FileText, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,13 @@ import Layout from "@/components/Layout";
 import SectionReveal from "@/components/SectionReveal";
 import waveSage from "@/assets/wave-sage.png";
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidgets: () => void;
+    };
+  }
+}
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,6 +24,20 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  // Initialize Calendly widget after component mounts (for client-side navigation)
+  useEffect(() => {
+    const initCalendly = () => {
+      if (window.Calendly) {
+        window.Calendly.initInlineWidgets();
+      }
+    };
+
+    initCalendly();
+    const timeout = setTimeout(initCalendly, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
