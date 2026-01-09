@@ -7,15 +7,15 @@ import profileProfessional from "@/assets/profile-professional.jpeg";
 import waveNavy from "@/assets/wave-navy.png";
 const milestones = [{
   company: "Trine",
-  achievement: "Built a startup to €100M in assets under management",
+  achievement: "Built dealflow of €200M with €100M in assets under management",
   role: "Co-Founder and COO/Head of BD"
 }, {
   company: "AMMP",
-  achievement: "Doubled customer base and led commercial growth",
+  achievement: "Doubled customer base, led GTM to new markets and streamlined sales processes with AI",
   role: "Fractional CCO"
 }, {
   company: "Sanate",
-  achievement: "Built operations and key tooling from scratch",
+  achievement: "Built operations processes and tech stack from scratch",
   role: "Fractional COO"
 }, {
   company: "Other Ventures",

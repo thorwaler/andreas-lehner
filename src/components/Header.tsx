@@ -13,7 +13,7 @@ const navLinks = [{
   label: "Book"
 }, {
   to: "/automation",
-  label: "Automation"
+  label: "AI Automation"
 }, {
   to: "/contact",
   label: "Contact"

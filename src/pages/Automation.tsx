@@ -57,7 +57,7 @@ const Automation = () => {
               <h2 className="text-display-sm mb-6">Why I love building with AI</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 The best automation isn't about replacing humans—it's about removing the grunt work 
-                so people can do more meaningful things. I use tools like Lovable, ChatGPT, and 
+                so people can do more meaningful things. I use tools like Lovable, ChatGPT, Claude AI, and 
                 custom integrations to build systems that feel almost magical to use.
               </p>
             </div>
@@ -132,7 +132,7 @@ const Automation = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-medium">The Challenge</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  AMMP Technologies needed to invoice customers based on complex usage data from 
+                  AMMP needed to invoice customers based on complex usage data from 
                   renewable energy installations. The manual process took days each month and was 
                   prone to errors.
                 </p>
@@ -141,14 +141,15 @@ const Automation = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   I built an automated invoicing system that pulls data from monitoring platforms, 
                   calculates usage-based fees, generates professional invoices, and sends them 
-                  automatically—all without human intervention.
+                  automatically—with minimal human oversight. The solution integrates with Xero invoicing, 
+                  AMMP API, Slack, Webhooks, and SharePoint/OneDrive.
                 </p>
 
                 <h3 className="text-2xl font-medium pt-4">The Result</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-secondary" />
-                    Monthly invoicing reduced from 2 days to 2 hours
+                    Monthly invoicing reduced from 1 week to less than 1 hour
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-secondary" />
