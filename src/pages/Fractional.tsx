@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Target, Users, TrendingUp, Calendar } from "lu
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionReveal from "@/components/SectionReveal";
-import profileProfessional from "@/assets/profile-professional.jpeg";
+import portraitAsset from "@/assets/andreas-portrait.webp.asset.json";
 import waveNavy from "@/assets/wave-navy.png";
 const milestones = [{
   company: "Trine",
@@ -69,7 +69,7 @@ const Fractional = () => {
               <SectionReveal delay={200}>
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-accent/10 rounded-2xl blur-xl" />
-                  <img alt="Andreas Lehner" className="relative w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl" src="/lovable-uploads/488f0e07-5dd0-4fbf-9393-6545f3b88b71.jpg" />
+                  <img alt="Andreas Lehner" className="relative w-full aspect-square object-cover object-top rounded-2xl shadow-2xl" src={portraitAsset.url} />
                 </div>
               </SectionReveal>
             </div>
