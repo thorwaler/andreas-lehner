@@ -3,7 +3,7 @@ import { ArrowRight, Users, Rocket, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionReveal from "@/components/SectionReveal";
-import profileImage from "@/assets/profile-casual.jpg";
+import portraitAsset from "@/assets/andreas-portrait.webp.asset.json";
 import waveSage from "@/assets/wave-sage.png";
 
 const Index = () => {
@@ -54,7 +54,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-accent/10 rounded-full blur-2xl" />
                 <img
-                  src={profileImage}
+                  src={portraitAsset.url}
                   alt="Andreas Lehner"
                   className="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-2xl"
                 />
